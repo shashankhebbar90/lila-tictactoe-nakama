@@ -1,6 +1,6 @@
 database:
   address:
-    - "${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}"
+    - "postgres:eFGggNMsbGdDZz1zZMNNQtSfbSprCdq1@postgres.railway.internal:5432/railway"
 
 runtime:
   js_entrypoint: "modules/build/index.js"
