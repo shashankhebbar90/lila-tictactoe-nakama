@@ -1,0 +1,15 @@
+{
+  "name": "lila-tictactoe-nakama-backend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "dev:build": "node ./scripts/build.mjs --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.1",
+    "typescript": "^5.8.2"
+  }
+}
+

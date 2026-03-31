@@ -1,0 +1,6 @@
+database:
+  address:
+    - "${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}"
+
+runtime:
+  js_entrypoint: "modules/build/index.js"

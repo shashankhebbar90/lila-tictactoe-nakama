@@ -1,0 +1,34 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nakama
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: localdbpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  nakama:
+    image: heroiclabs/nakama:3.21.1
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    entrypoint:
+      - /bin/sh
+      - -ecx
+      - >
+        /nakama/nakama migrate up --database.address postgres:localdbpass@postgres:5432/nakama &&
+        exec /nakama/nakama --config /nakama/data/config.yml
+    ports:
+      - "7350:7350" # HTTP API
+      - "7351:7351" # gRPC
+      - "7352:7352" # Realtime (WebSocket)
+    volumes:
+      - ./backend/config/config.yml:/nakama/data/config.yml:ro
+      - ./backend/modules:/nakama/data/modules:ro
+
+volumes:
+  postgres_data:

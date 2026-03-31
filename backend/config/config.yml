@@ -1,0 +1,16 @@
+name: lila-tictactoe
+
+logger:
+  level: "DEBUG"
+  stdout: true
+
+database:
+  address:
+    - "postgres:localdbpass@postgres:5432/nakama"
+
+socket:
+  server_key: "defaultkey"
+
+session:
+  token_expiry_sec: 7200
+
