@@ -3,4 +3,4 @@ database:
     - "postgres://postgres:eFGggNMsbGdDZzlzZMNNQtSfbSprCdql@postgres.railway.internal:5432/railway"
 
 runtime:
-  js_entrypoint: "modules/build/index.js"
+  js_entrypoint: "build/index.js"
