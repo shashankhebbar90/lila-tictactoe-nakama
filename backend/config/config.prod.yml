@@ -4,10 +4,9 @@ database:
 
 socket:
   server_key: "defaultkey"
-
 session:
-  encryption_key: "supersecretkey"
-  refresh_encryption_key: "supersecretkey"
+  encryption_key: "encryptionkey123"
+  refresh_encryption_key: "refreshkey456"
 
 runtime:
   js_entrypoint: "build/index.js"
