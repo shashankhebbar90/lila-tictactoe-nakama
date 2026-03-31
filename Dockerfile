@@ -11,10 +11,8 @@ RUN npm run build
 # ---------- Nakama Stage ----------
 FROM heroiclabs/nakama:3.21.1
 
-# ✅ COPY BUILT FILES
 COPY --from=builder /app/backend/modules/build /nakama/data/modules/build
 
-# ✅ COPY CONFIG
 COPY ./backend/config/config.prod.yml /nakama/data/config.yml
 
 ENTRYPOINT ["/bin/sh", "-ecx", "\
