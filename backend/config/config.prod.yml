@@ -2,5 +2,21 @@ database:
   address:
     - "postgres://postgres:eFGggNMsbGdDZzlzZMNNQtSfbSprCdql@postgres.railway.internal:5432/railway"
 
+socket:
+  server_key: "defaultkey"
+
+session:
+  encryption_key: "supersecretkey"
+  refresh_encryption_key: "supersecretkey"
+
 runtime:
   js_entrypoint: "build/index.js"
+
+# 👇 ADD THIS
+cors:
+  allow_origins:
+    - "*"
+  allow_headers:
+    - "*"
+  allow_methods:
+    - "*"
