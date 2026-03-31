@@ -14,6 +14,6 @@ COPY --from=builder /app/backend/modules/build /nakama/data/modules/build
 COPY ./backend/config/config.prod.yml /nakama/data/config.yml
 
 ENTRYPOINT ["/bin/sh", "-ecx", "\
-/nakama/nakama migrate up --database.address postgres:eFGggNMsbGdDZz1zZMNNQtSfbSprCdq1@postgres.railway.internal:5432/railway && \
+/nakama/nakama migrate up --database.address postgres://postgres:eFGggNMsbGdDZzlzZMNNQtSfbSprCdql@postgres.railway.internal:5432/railway && \
 exec /nakama/nakama --config /nakama/data/config.yml \
 "]
