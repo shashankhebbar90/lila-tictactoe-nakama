@@ -4,9 +4,9 @@ A server-authoritative multiplayer Tic-Tac-Toe game built using Nakama, featurin
 
 ##  Live Demo
 
-- **Frontend:** https://your-frontend-url
-- **Backend (Nakama):** http://your-server-ip:7350
-- **GitHub Repo:** https://github.com/your-repo
+- **Frontend:** https://lila-tictactoe-orcin.vercel.app/
+- **Backend (Nakama):** https://lila-tictactoe-nakama-production.up.railway.app/
+- **GitHub Repo:** https://github.com/shashankhebbar90/lila-tictactoe-nakama
 
 
 ##  Tech Stack

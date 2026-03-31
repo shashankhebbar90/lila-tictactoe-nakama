@@ -61,9 +61,9 @@ function normalizeWinLine(raw: unknown): number[] | null {
   return raw.map((n) => Number(n));
 }
 
-const API_HOST = "127.0.0.1";
-const API_PORT = "7350";
-const USE_SSL = false;
+const API_HOST = "lila-tictactoe-nakama-production.up.railway.app";
+const API_PORT = "";
+const USE_SSL = true;
 const SERVER_KEY = "defaultkey";
 
 function App() {
