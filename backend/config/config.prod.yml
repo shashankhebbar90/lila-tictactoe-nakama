@@ -1,29 +1,22 @@
+name: "lila-tictactoe"
+
 database:
   address:
     - "postgres://postgres:eFGggNMsbGdDZzlzZMNNQtSfbSprCdql@postgres.railway.internal:5432/railway"
 
+runtime:
+  js_entrypoint: "build/index.js"
+  http_key: "defaultkey"
+
 socket:
   server_key: "defaultkey"
+  port: 7352
 
 session:
   encryption_key: "encryptionkey123"
   refresh_encryption_key: "refreshkey456"
-
-runtime:
-  js_entrypoint: "build/index.js"
-
+  token_expiry_sec: 7200
 
 console:
   port: 7351
   address: "0.0.0.0"
-
-
-session:
-  token_expiry_sec: 7200
-
-socket:
-  port: 7352
-
-
-runtime:
-  http_key: "defaultkey"
