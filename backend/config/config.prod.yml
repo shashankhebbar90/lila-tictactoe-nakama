@@ -4,6 +4,7 @@ database:
 
 socket:
   server_key: "defaultkey"
+
 session:
   encryption_key: "encryptionkey123"
   refresh_encryption_key: "refreshkey456"
@@ -11,11 +12,18 @@ session:
 runtime:
   js_entrypoint: "build/index.js"
 
-# 👇 ADD THIS
-cors:
-  allow_origins:
-    - "*"
-  allow_headers:
-    - "*"
-  allow_methods:
-    - "*"
+
+console:
+  port: 7351
+  address: "0.0.0.0"
+
+
+session:
+  token_expiry_sec: 7200
+
+socket:
+  port: 7352
+
+
+runtime:
+  http_key: "defaultkey"
