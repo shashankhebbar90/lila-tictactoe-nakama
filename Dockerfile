@@ -1,3 +1,4 @@
+# ---------- Build Stage ----------
 FROM node:20 AS builder
 
 WORKDIR /app
@@ -7,7 +8,6 @@ WORKDIR /app/backend
 RUN npm install
 RUN npm run build
 
-# ---- Nakama stage ----
 FROM heroiclabs/nakama:3.21.1
 
 COPY --from=builder /app/backend/modules/build /nakama/data/modules/build
