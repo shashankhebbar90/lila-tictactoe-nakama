@@ -12,6 +12,9 @@ socket:
   server_key: "defaultkey"
   port: 7352
 
+  cors_allow_origins:
+    - "*"
+
 session:
   encryption_key: "encryptionkey123"
   refresh_encryption_key: "refreshkey456"
@@ -20,8 +23,3 @@ session:
 console:
   port: 7351
   address: "0.0.0.0"
-
-
-api:
-    cors_allow_origins:
-      - "https://lila-tictactoe-orcin.vercel.app"
