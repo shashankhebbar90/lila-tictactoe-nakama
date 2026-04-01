@@ -20,3 +20,8 @@ session:
 console:
   port: 7351
   address: "0.0.0.0"
+
+
+api:
+    cors_allow_origins:
+      - "https://lila-tictactoe-orcin.vercel.app"
