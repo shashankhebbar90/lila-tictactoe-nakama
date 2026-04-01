@@ -62,7 +62,7 @@ function normalizeWinLine(raw: unknown): number[] | null {
 }
 
 const API_HOST = "lila-tictactoe-nakama-production.up.railway.app";
-const API_PORT = "";
+const API_PORT = "443";
 const USE_SSL = true;
 const SERVER_KEY = "defaultkey";
 
